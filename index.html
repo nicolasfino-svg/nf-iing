@@ -2,50 +2,83 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Purificador de Aire Inteligente</title>
+<title>AirPure Bogotá</title>
 
 <style>
 body {
-  font-family: Arial;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background: #f5f7fa;
+  background: #eef3f8;
+  scroll-behavior: smooth;
 }
 
-header {
-  background: linear-gradient(90deg, #0a74da, #00c6ff);
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-h1 { margin: 0; }
-
-.container {
-  padding: 20px;
-  max-width: 1000px;
-  margin: auto;
+/* ANIMACIONES */
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(20px);}
+  to {opacity:1; transform: translateY(0);}
 }
 
 .card {
-  background: white;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease;
 }
 
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #0a74da, #00c6ff);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #00ffcc;
+}
+
+h1 {
+  margin: 10px 0;
+}
+
+/* CONTENEDOR */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* TARJETAS */
+.card {
+  background: white;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* BOTONES */
 button {
   background: #0a74da;
   color: white;
   border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
+  padding: 14px 25px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
+  transition: 0.3s;
 }
 
 button:hover {
   background: #084c9e;
+  transform: scale(1.1);
 }
 
 .whatsapp {
@@ -55,13 +88,34 @@ button:hover {
 .highlight {
   color: #0a74da;
   font-weight: bold;
+  font-size: 20px;
 }
 
+/* FOOTER */
 footer {
-  background: #222;
+  background: #111;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
+}
+
+/* BOTÓN FLOTANTE */
+.float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 18px;
+  border-radius: 50%;
+  font-size: 22px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.float:hover {
+  transform: scale(1.2);
 }
 </style>
 
@@ -70,82 +124,73 @@ footer {
 <body>
 
 <header>
-  <h1>Purificador de Aire Inteligente</h1>
-  <p>Solución económica para mejorar la calidad del aire en Bogotá</p>
 
-  <a href="https://wa.me/573172693759?text=Hola%20quiero%20comprar%20el%20purificador" target="_blank">
-    <button>Comprar Ahora</button>
-  </a>
+<div class="logo">🌿 Air<span>Pure</span></div>
+
+<h1>Purificador de Aire Inteligente</h1>
+<p>Respira aire limpio en Bogotá</p>
+
+<a href="https://wa.me/573172693759?text=Hola%20quiero%20comprar%20el%20purificador" target="_blank">
+<button>🛒 Comprar Ahora</button>
+</a>
+
 </header>
 
 <div class="container">
 
 <div class="card">
 <h2>🌎 Problema</h2>
-<p>Bogotá presenta altos niveles de contaminación (PM2.5 y PM10), afectando la salud de miles de personas.</p>
+<p>Altos niveles de contaminación afectan la salud en Bogotá (PM2.5 y PM10).</p>
 </div>
 
 <div class="card">
 <h2>💡 Solución</h2>
-<p>Un purificador de aire de <span class="highlight">bajo costo</span> que detecta contaminación y limpia el aire automáticamente.</p>
+<p>Purificador inteligente de <span class="highlight">bajo costo</span> que limpia el aire automáticamente.</p>
 </div>
 
 <div class="card">
-<h2>⚙️ ¿Cómo funciona?</h2>
+<h2>⚙️ Tecnología</h2>
 <ul>
-<li>Sensores detectan contaminación (PM2.5 / PM10 y CO2)</li>
-<li>Arduino procesa los datos</li>
-<li>Se activa el ventilador automáticamente</li>
-<li>El filtro HEPA elimina hasta <span class="highlight">99.8% de partículas</span></li>
+<li>Sensores de partículas y CO2</li>
+<li>Microcontrolador Arduino</li>
+<li>Activación automática</li>
+<li>Filtro HEPA (99.8% eficiencia)</li>
 </ul>
 </div>
 
 <div class="card">
 <h2>🚀 Beneficios</h2>
 <ul>
-<li>✔ Mejora la salud respiratoria</li>
-<li>✔ Bajo consumo energético (3W - 7W)</li>
-<li>✔ Económico y accesible</li>
-<li>✔ Sistema automático inteligente</li>
-<li>✔ Diseño sostenible</li>
+<li>✔ Aire más limpio</li>
+<li>✔ Bajo consumo (3W - 7W)</li>
+<li>✔ Económico</li>
+<li>✔ Automático</li>
 </ul>
 </div>
 
 <div class="card">
-<h2>🎯 Público Objetivo</h2>
-<p>Hogares, estudiantes, oficinas y empresas en zonas contaminadas de Bogotá.</p>
-</div>
-
-<div class="card">
 <h2>💰 Precio</h2>
-<p><span class="highlight">$250.000 COP</span></p>
+<p class="highlight">$250.000 COP</p>
 
 <a href="https://wa.me/573172693759?text=Hola%20estoy%20interesado%20en%20el%20purificador" target="_blank">
-  <button class="whatsapp">Comprar por WhatsApp</button>
+<button class="whatsapp">📲 Comprar por WhatsApp</button>
 </a>
 
 </div>
 
 <div class="card">
-<h2>📊 Tecnología</h2>
-<p>Incluye sensores de partículas, microcontrolador Arduino y filtro HEPA de alta eficiencia.</p>
-</div>
-
-<div class="card">
 <h2>📈 Impacto</h2>
-<p>Reduce riesgos de enfermedades respiratorias y mejora la calidad de vida.</p>
+<p>Reduce enfermedades respiratorias y mejora la calidad de vida.</p>
 </div>
 
 </div>
 
 <footer>
-<p>Proyecto tecnológico - Purificador de Aire Inteligente</p>
+<p>© 2026 AirPure - Tecnología para un aire más limpio</p>
 </footer>
 
-<!-- BOTÓN FLOTANTE WHATSAPP -->
-<a href="https://wa.me/573172693759?text=Hola%20quiero%20información%20del%20purificador" 
-target="_blank" 
-style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px; border-radius:50%; text-decoration:none; font-size:20px;">
+<!-- BOTÓN FLOTANTE -->
+<a href="https://wa.me/573172693759?text=Hola%20quiero%20información" class="float" target="_blank">
 💬
 </a>
 
