@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>AirPure Bogotá</title>
+
+<style>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #eef3f8;
+  scroll-behavior: smooth;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(20px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+.card {
+  animation: fadeIn 1s ease;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #0a74da, #00c6ff);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.logo {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #00ffcc;
+}
+
+h1 {
+  margin: 10px 0;
+}
+
+/* CONTENEDOR */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* TARJETAS */
+.card {
+  background: white;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* BOTONES */
+button {
+  background: #0a74da;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #084c9e;
+  transform: scale(1.05);
+}
+
+.whatsapp {
+  background: #25D366;
+}
+
+.highlight {
+  color: #0a74da;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* TEXTO OCULTO */
+.content {
+  display: none;
+  margin-top: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* BOTÓN FLOTANTE */
+.float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 18px;
+  border-radius: 50%;
+  font-size: 22px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.float:hover {
+  transform: scale(1.2);
+}
+</style>
+
+<script>
+function toggleContent(id) {
+  var content = document.getElementById(id);
+
+  if(content.style.display === "block") {
+    content.style.display = "none";
+  } else {
+    content.style.display = "block";
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🌿 Air<span>Pure</span></div>
+
+<h1>Purificador de Aire Inteligente</h1>
+<p>Respira aire limpio en Bogotá</p>
+
+<a href="https://wa.me/573172693759?text=Hola%20quiero%20comprar%20el%20purificador" target="_blank">
+<button>🛒 Comprar Ahora</button>
+</a>
+
+</header>
+
+<div class="container">
+
+<!-- PROBLEMA -->
+<div class="card">
+<h2>🌎 Problema</h2>
+
+<button onclick="toggleContent('problema')">
+Ver información
+</button>
+
+<div id="problema" class="content">
+
+<p>
+En Bogotá, la contaminación del aire es un problema que afecta a muchas personas todos los días. 
+El humo de los carros, buses, fábricas y el polvo que se levanta en las calles hacen que el aire tenga partículas contaminantes conocidas como PM2.5 y PM10.
+</p>
+
+<p>
+Estas partículas son tan pequeñas que pueden entrar fácilmente a los pulmones y causar enfermedades respiratorias, alergias, tos e incluso problemas cardiovasculares.
+</p>
+
+<p>
+Las zonas con más contaminación suelen ser Kennedy, Bosa, Fontibón y Puente Aranda, donde hay mucho tráfico y actividad industrial.
+</p>
+
+<p>
+Por esta razón nace AirPure, un purificador de aire económico e inteligente diseñado para ayudar a las personas a respirar un aire más limpio y saludable dentro de hogares, oficinas y espacios cerrados.
+</p>
+
+</div>
+</div>
+
+<!-- SOLUCIÓN -->
+<div class="card">
+<h2>💡 Solución</h2>
+
+<button onclick="toggleContent('solucion')">
+Ver información
+</button>
+
+<div id="solucion" class="content">
+
+<p>
+AirPure detecta automáticamente la contaminación del aire mediante sensores inteligentes de partículas y CO2.
+</p>
+
+<p>
+Cuando el sistema detecta mala calidad del aire, activa un ventilador que hace pasar el aire por un filtro HEPA capaz de eliminar hasta el 99.8% de partículas contaminantes.
+</p>
+
+<p>
+Esto ayuda a mejorar la calidad del aire y proteger la salud de las personas.
+</p>
+
+</div>
+</div>
+
+<!-- TECNOLOGÍA -->
+<div class="card">
+<h2>⚙️ Tecnología</h2>
+
+<button onclick="toggleContent('tecnologia')">
+Ver información
+</button>
+
+<div id="tecnologia" class="content">
+
+<ul>
+<li>Sensores PM2.5 y PM10</li>
+<li>Sensor de CO2</li>
+<li>Arduino UNO</li>
+<li>Filtro HEPA de alta eficiencia</li>
+<li>Ventilador automático inteligente</li>
+</ul>
+
+</div>
+</div>
+
+<!-- BENEFICIOS -->
+<div class="card">
+<h2>🚀 Beneficios</h2>
+
+<button onclick="toggleContent('beneficios')">
+Ver información
+</button>
+
+<div id="beneficios" class="content">
+
+<ul>
+<li>✔ Aire más limpio y saludable</li>
+<li>✔ Reduce riesgos respiratorios</li>
+<li>✔ Bajo consumo energético</li>
+<li>✔ Diseño económico</li>
+<li>✔ Funcionamiento automático</li>
+</ul>
+
+</div>
+</div>
+
+<!-- PRECIO -->
+<div class="card">
+<h2>💰 Precio</h2>
+
+<p class="highlight">$250.000 COP</p>
+
+<a href="https://wa.me/573172693759?text=Hola%20quiero%20comprar%20el%20purificador" target="_blank">
+<button class="whatsapp">
+📲 Comprar por WhatsApp
+</button>
+</a>
+
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 AirPure - Tecnología para un aire más limpio</p>
+</footer>
+
+<!-- BOTÓN FLOTANTE -->
+<a href="https://wa.me/573172693759?text=Hola%20quiero%20información%20del%20purificador" 
+class="float" 
+target="_blank">
+💬
+</a>
+
+</body>
+</html>
